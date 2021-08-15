@@ -1,3 +1,4 @@
 language: php
 php:
     - '8.0.2'
+before_install: phpenv config-add myconfig.ini
