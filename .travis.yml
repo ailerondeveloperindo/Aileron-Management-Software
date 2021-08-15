@@ -5,6 +5,12 @@ before_script:
   - composer self-update
   - composer install --no-interaction
   - php artisan key:generate
-  
+env:
+  - APP_NAME=Laravel
+  - APP_ENV=local
+  - APP_KEY=base64:oeIYUvNynZ1HsKka3GRX0YilD32iVyE6EaW2z+aahP8=
+  - APP_DEBUG=true
+  - APP_URL=http://source.test
+
 script:
   - vendor/bin/phpunit
