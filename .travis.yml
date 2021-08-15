@@ -1,6 +1,12 @@
 language: php
 php:
     - '8.0.2'
-before_install:
-  - sudo apt install openssl php-common php-curl php-json php-mbstring php-mysql php-xml php-zip
-  - phpenv config-add myconfig.ini
+before_script:
+  - cp .env.travis .env
+  - sudo mysql -e 'CREATE DATABASE testing;'
+  - composer self-update
+  - composer install --no-interaction
+  - php artisan migrate --no-interaction -vvv
+
+script:
+  - vendor/bin/phpunit
