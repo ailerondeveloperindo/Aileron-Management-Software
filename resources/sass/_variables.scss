@@ -1,0 +1,55 @@
+// Body
+$body-bg: #ffffff;
+
+// Typography
+$font-family-base:            'Source Sans Pro', sans-serif;
+$font-size-base:              0.9rem;
+$line-height-base:            1.6;
+
+// Headings
+$headings-font-weight:        700;
+$h1-font-size:                $font-size-base * 2;
+$h2-font-size:                $font-size-base * 1.125;
+$h3-font-size:                $font-size-base * 1.75;
+$h4-font-size:                $font-size-base;
+
+// Button
+$btn-font-family: 'Source Sans Pro', sans-serif;
+
+$btn-padding-x: 0.625em; //10px
+$btn-padding-y: 0.9375em; //15px
+$btn-line-height: 1.25em; //20px
+
+$btn-padding-x-sm: 0.625em;
+$btn-padding-y-sm: 0.625em;
+$btn-font-size-sm: 1em;
+
+$btn-padding-x-lg: 1.25em;
+$btn-padding-y-lg: 0.9375em;
+$btn-font-size-lg: 1.5em; //24px
+
+//----------- COLORS
+
+
+// Colors - Green
+$green-50: #e5f6e9;
+$green-200: #98DBA8;
+$green-400: #42C369;
+$green-600: #00A844;
+$green-900: #006519;
+
+// Colors - Gray
+
+$gray-50: #FFFFFF;
+$gray-100: #FAFAFA;
+$gray-300: #F0F0F0;
+$gray-500: #c2c2c2;
+$gray-700: #818181;
+$gray-900: #3C3C3C;
+$black: #1a1a1a;
+
+// Colors - Overrides
+$primary:       $green-600;
+$secondary:     $gray-700;
+$dark: $black;
+$light: $gray-50;

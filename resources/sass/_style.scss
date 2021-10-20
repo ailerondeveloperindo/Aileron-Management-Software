@@ -1,0 +1,110 @@
+// Overwrites
+@each $color, $value in $theme-colors {
+    .btn-#{$color} 
+    {
+        /* If value is gray-100 then text color = $black else $gray-100 */
+        $font-color: if($value == $light, $black, if($value == $dark, $gray-500, $gray-50 ));
+        $hover-bg: if($value == $light, $green-600, shade-color($value, 20%));
+        
+        @include button-variant(
+          $value, 
+          $value,
+          $color: $font-color
+        );
+        outline: 0;
+        border: 0;
+
+        &:hover 
+        {
+            outline: 0;
+            border: 0;
+            color: if($value == $light, $gray-50, tint-color($font-color, 60%));
+            background-color: $hover-bg;
+        }
+        &:active, &.active 
+        {
+            background-color: shade-color($hover-bg, 40%);           
+            &:focus{
+                color: $font-color;
+                background-color: $value;
+                border: 0;
+                outline: 0;
+                box-shadow: none;
+            }
+        }
+        // Overwrites default focus
+        &:focus
+        {
+            color: $font-color;
+            background-color: $hover-bg;
+            outline: 0;
+            box-shadow: none;            
+        }
+    }
+  }
+
+// Custom Code
+.content-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100vw;
+    height: 100vh;
+}
+
+.detail-pesanan{
+    display: flex;
+    flex-direction: column;
+    width: 456px;
+    height: 100%;
+    background-color: white;
+
+    &--header{
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.cart-produk{
+    display:flex;
+    flex-grow: 1;
+    flex-direction: column;
+    overflow-y: visible;
+
+    &--itemcolumn{
+        display:flex;
+        flex-grow: 1;
+    }
+}
+
+.left-panel{
+    display:flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    background-color: rgb(223, 223, 223);
+
+    &--navbar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: $black;
+    }
+
+}
+
+.product-wrap{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+
+    &--product-list{
+        flex-grow: 1;
+    }
+
+    &--category-list{
+        display: flex;
+        flex-direction: column;
+        background-color: $gray-50;
+        
+    }
+}

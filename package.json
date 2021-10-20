@@ -11,10 +11,12 @@
     },
     "devDependencies": {
         "@babel/preset-react": "^7.13.13",
+        "@popperjs/core": "^2.10.2",
         "axios": "^0.21",
-        "bootstrap": "^4.6.0",
+        "bootstrap": "^5.0.0-beta3",
+        "cross-env": "^7.0.3",
         "jquery": "^3.6",
-        "laravel-mix": "^6.0.6",
+        "laravel-mix": "^6.0.31",
         "lodash": "^4.17.19",
         "popper.js": "^1.16.1",
         "postcss": "^8.1.14",
@@ -23,5 +25,8 @@
         "resolve-url-loader": "^4.0.0",
         "sass": "^1.32.11",
         "sass-loader": "^11.0.1"
+    },
+    "dependencies": {
+        "bootstrap-icons": "^1.6.0"
     }
 }
