@@ -72,7 +72,30 @@
 
     &--itemcolumn{
         display:flex;
-        flex-grow: 1;
+        padding: 10px;
+    }
+
+    &--qtyinput{
+        border: 0;
+        outline: 0;
+        background-color: $primary;
+        text-align: center;
+        color: $light;
+        font-size: $h2-font-size;
+        font-weight: $font-weight-bold;
+
+        &::placeholder{
+            color: $light;
+        }
+
+        &:focus{
+            background-color: $green-50;
+            color: $dark;
+
+            &::placeholder{
+                color: transparent;
+            }
+        }
     }
 }
 

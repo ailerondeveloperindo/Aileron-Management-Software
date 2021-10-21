@@ -5808,16 +5808,16 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: 1.0125rem;
+  font-size: calc(1.26rem + 0.12vw);
+}
+@media (min-width: 1200px) {
+  h2, .h2 {
+    font-size: 1.35rem;
+  }
 }
 
 h3, .h3 {
-  font-size: calc(1.2825rem + 0.39vw);
-}
-@media (min-width: 1200px) {
-  h3, .h3 {
-    font-size: 1.575rem;
-  }
+  font-size: 1.0125rem;
 }
 
 h4, .h4 {
@@ -9103,11 +9103,11 @@ progress {
 }
 
 .fs-2 {
-  font-size: 1.0125rem !important;
+  font-size: calc(1.26rem + 0.12vw) !important;
 }
 
 .fs-3 {
-  font-size: calc(1.2825rem + 0.39vw) !important;
+  font-size: 1.0125rem !important;
 }
 
 .fs-4 {
@@ -12657,8 +12657,8 @@ progress {
     font-size: 1.8rem !important;
   }
 
-  .fs-3 {
-    font-size: 1.575rem !important;
+  .fs-2 {
+    font-size: 1.35rem !important;
   }
 }
 @media print {
@@ -13164,12 +13164,43 @@ progress {
 .cart-produk {
   display: flex;
   flex-grow: 1;
-  gap: 10px;
+  flex-direction: column;
   overflow-y: visible;
 }
 .cart-produk--itemcolumn {
   display: flex;
-  flex-grow: 1;
+  padding: 10px;
+}
+.cart-produk--qtyinput {
+  border: 0;
+  outline: 0;
+  background-color: #00A844;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+.cart-produk--qtyinput::-moz-placeholder {
+  color: #FFFFFF;
+}
+.cart-produk--qtyinput:-ms-input-placeholder {
+  color: #FFFFFF;
+}
+.cart-produk--qtyinput::placeholder {
+  color: #FFFFFF;
+}
+.cart-produk--qtyinput:focus {
+  background-color: #e5f6e9;
+  color: #1a1a1a;
+}
+.cart-produk--qtyinput:focus::-moz-placeholder {
+  color: transparent;
+}
+.cart-produk--qtyinput:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.cart-produk--qtyinput:focus::placeholder {
+  color: transparent;
 }
 
 .left-panel {
