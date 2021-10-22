@@ -14,4 +14,5 @@ require('./bootstrap');
  */
 
 require('./components/POSDetailPesananWrapper');
+require('./components/POSProductListWrapper');
 

@@ -13153,11 +13153,12 @@ progress {
 .detail-pesanan {
   display: flex;
   flex-direction: column;
-  width: 456px;
+  min-width: 456px;
   height: 100%;
   background-color: white;
 }
 .detail-pesanan--header {
+  max-height: 67px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -13165,13 +13166,14 @@ progress {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  overflow-y: visible;
+  height: calc(100vh - 67px);
+  overflow-y: scroll;
 }
 .cart-produk--itemcolumn {
   display: flex;
-  padding: 10px;
 }
 .cart-produk--qtyinput {
+  width: 60%;
   border: 0;
   outline: 0;
   background-color: #00A844;
@@ -13208,6 +13210,7 @@ progress {
   flex-direction: column;
   flex-grow: 1;
   height: 100%;
+  max-width: calc(100vw - 456px);
   background-color: #dfdfdf;
 }
 .left-panel--navbar {
@@ -13215,18 +13218,40 @@ progress {
   flex-direction: row;
   justify-content: space-between;
   background-color: #1a1a1a;
+  min-height: 73px;
 }
 
 .product-wrap {
   display: flex;
   flex-direction: row;
   flex-grow: 1;
+  max-height: calc(100vh - 73px);
 }
 .product-wrap--product-list {
+  display: flex;
+  flex-flow: row wrap;
   flex-grow: 1;
+  gap: 10px;
+  padding: 10px;
+  overflow-y: scroll;
 }
 .product-wrap--category-list {
   display: flex;
   flex-direction: column;
   background-color: #FFFFFF;
+}
+.product-wrap--card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  height: 212px;
+  width: 170px;
+  overflow: hidden;
+  border-width: 0.5px;
+  border-color: #c2c2c2;
+  background-color: #FFFFFF;
+}
+.product-wrap--image {
+  height: 60%;
+  background-color: #6c757d;
 }
